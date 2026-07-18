@@ -1,3 +1,4 @@
+// src/features/dashboard/types/dashboard.types.ts
 export interface DashboardSummary {
   subjectsCount: number
   notesCount: number

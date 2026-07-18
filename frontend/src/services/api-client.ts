@@ -1,4 +1,4 @@
-// src/service/api-client.ts
+// src/services/api-client.ts
 import { axiosInstance } from "@/lib/axios"
 
 export const apiClient = axiosInstance

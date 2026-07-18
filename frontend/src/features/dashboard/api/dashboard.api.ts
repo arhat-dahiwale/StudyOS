@@ -1,3 +1,4 @@
+// src/features/dashboard/api/dashboard.api.ts
 import { apiClient } from "@/services/api-client"
 
 import { DashboardResponse } from "../types/dashboard.types"
