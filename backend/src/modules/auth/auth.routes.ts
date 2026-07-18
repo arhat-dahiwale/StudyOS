@@ -4,7 +4,6 @@ import { validationResult } from "express-validator"
 import { authController } from "./auth.controller"
 import { registerValidator, loginValidator } from "./auth.validation"
 import { validate } from "../../middleware/validate.middleware"
-import { authMiddleware } from "../../middleware/auth.middleware"
 
 const router = Router();
 

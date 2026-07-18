@@ -25,7 +25,11 @@ export class SubjectsService {
 
     return {
       success: true,
-      subjects,
+      subjects: subjects.map((subject: any) => ({
+        ...subject,
+        notesCount: Number(subject.notesCount),
+        assignmentsCount: Number(subject.assignmentsCount),
+      })),
     }
   }
 

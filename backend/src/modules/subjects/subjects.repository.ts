@@ -44,14 +44,26 @@ export class SubjectsRepository {
     const result = await db.query(
       `
       SELECT
-        id,
-        name,
-        color,
-        icon,
-        semester
-      FROM subjects
-      WHERE user_id = $1
-      ORDER BY created_at DESC
+          s.id,
+          s.name,
+          s.color,
+          s.icon,
+          s.semester,
+          (
+              SELECT COUNT(*)
+              FROM notes n
+              WHERE n.subject_id = s.id
+          ) AS "notesCount",
+
+          (
+              SELECT COUNT(*)
+              FROM assignments a
+              WHERE a.subject_id = s.id
+          ) AS "assignmentsCount"
+
+      FROM subjects s
+      WHERE s.user_id = $1
+      ORDER BY s.created_at DESC;
       `,
       [userId]
     )
