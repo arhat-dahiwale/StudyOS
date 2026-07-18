@@ -1,10 +1,10 @@
 import { apiClient } from "@/services/api-client"
 
-import { DashboardSummary } from "../types/dashboard.types"
+import { DashboardResponse } from "../types/dashboard.types"
 
 export const dashboardApi = {
   getSummary() {
-    return apiClient.get<DashboardSummary>(
+    return apiClient.get<DashboardResponse>(
       "/dashboard/summary"
     )
   },

@@ -5,3 +5,8 @@ export interface DashboardSummary {
   completedAssignments: number
   totalStudyDuration: number
 }
+
+export interface DashboardResponse {
+  success: boolean
+  summary: DashboardSummary
+}

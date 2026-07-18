@@ -13,6 +13,9 @@ import subjectsRoutes from "./modules/subjects/subjects.routes"
 import notesRoutes from "./modules/notes/notes.routes"
 import assignmentsRoutes from "./modules/assignments/assignments.routes"
 import studySessionsRoutes from "./modules/study-sessions/study-sessions.routes"
+import dashboardRoutes from "./modules/dashboard/dashboard.routes"
+
+
 
 
 
@@ -33,6 +36,7 @@ app.use("/subjects", subjectsRoutes)
 app.use("/notes", notesRoutes)
 app.use("/assignments", assignmentsRoutes)
 app.use("/study-sessions", studySessionsRoutes)
+app.use("/dashboard", dashboardRoutes)
 
 
 
